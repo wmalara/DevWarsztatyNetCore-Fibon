@@ -8,6 +8,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibon.Service", "Fibon.Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibon.Messages", "Fibon.Messages\Fibon.Messages.csproj", "{C672AE6A-352E-4D20-92ED-2F808EF09C4E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{BDD82995-CBA3-4B9D-B8F6-08B6F8AE8395}"
+	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+		after-success.sh = after-success.sh
+		buildDockerImages.sh = buildDockerImages.sh
+		docker-compose.yaml = docker-compose.yaml
+		dotnet-build.sh = dotnet-build.sh
+		dotnetPublish.sh = dotnetPublish.sh
+		travis-build.sh = travis-build.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
