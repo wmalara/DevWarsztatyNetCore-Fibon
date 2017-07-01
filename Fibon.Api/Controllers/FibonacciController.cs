@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RawRabbit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace Fibon.Api.Controllers
     [Route("[controller]")]
     public class FibonacciController : Controller
     {
+        private readonly IBusClient busClient;
+
+        public FibonacciController(IBusClient busClient)
+        {
+            this.busClient = busClient;
+        }
+
         [HttpGet("{number}")]
         public IActionResult Get(int number)
         {
