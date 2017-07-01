@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Fibon.Api.Framework;
 using RawRabbit.vNext;
 using RawRabbit;
+using Fibon.Api.Repository;
 
 namespace Fibon.Api
 {
@@ -33,6 +34,7 @@ namespace Fibon.Api
             // Add framework services.
             services.AddMvc();
             services.Configure<RabbitMqOptions>(Configuration.GetSection("rabbitmq"));
+            services.AddSingleton<IRepository, InMemoryRepository>();
             ConfigureRabbitmq(services);
         }
 
